@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you cite a Nine Buckets issue, please cite the series as below."
+title: "Nine Buckets — dispatches from a nine-account LLM fan-out"
+type: dataset
+authors:
+  - family-names: Dziatkovskii
+    given-names: Anton
+    orcid: "https://orcid.org/0000-0001-7408-3054"
+    affiliation: "Palo Alto AI Research Lab"
+repository-code: "https://github.com/tonydzi/nine-buckets"
+url: "https://github.com/tonydzi/nine-buckets"
+date-released: "2026-09-15"
+keywords:
+  - llm-evaluation
+  - model-disagreement
+  - multi-model
+  - reasoning
+abstract: >-
+  One question put to nine independent paid LLM accounts, each in its strongest
+  reasoning mode, with the disagreement published rather than averaged away. A
+  rail is vendor#account, not vendor, so separate subscriptions to the same
+  vendor count as separate legs. Every issue reports which legs answered, where
+  three or more legs agreed independently, where they split, the lonely
+  position, and what came back as garbage. Failure rows are mandatory.
