@@ -34,10 +34,11 @@ No configuration. Question text and which accounts to use come from the human.
 
 ### Verify
 ```bash
-ls issues/01-hidden-job-market.md
-grep -c "^## " issues/01-hidden-job-market.md
+f=issues/01-hidden-job-market.md
+ls "$f" && for h in "The question" "The legs" "Where they agreed" "Where they split" "The lonely position" "What came back as garbage" "The verdict"; do grep -q "^## $h" "$f" && echo "ok  $h" || echo "MISSING  $h"; done
+grep -c "01-hidden-job-market" README.md
 ```
-Expected: the file is listed, and the heading count is at least 7, including "The question", "The legs", "Where they agreed", "The lonely position", "What came back as garbage" and "The verdict". The README's Issues table must list the same file.
+Expected: the file is listed, seven `ok` lines and no `MISSING` line, and the last command prints `1` or more (the Issues table links the file). The file has 8 `## ` headings: the 7 format sections plus a closing "One note on how this was made". The same loop, with the new file name, is how to check an issue you write. PowerShell: `Select-String -Path issues-hidden-job-market.md -Pattern '^## ' | ForEach-Object Line`. This checks structure only, not whether the legs really ran independently.
 
 ### Uninstall / rollback
 Delete the cloned folder. Nothing else was changed on the machine.
